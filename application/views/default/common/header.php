@@ -14,5 +14,5 @@
     <link href="<?php echo base_url('asset/asset_default/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn|Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url('asset/asset_default/asset/asset_index/bootstrap/js/bootstrap.min.js')?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/asset_default/asset/default.css')?>">
+    <link rel="stylesheet" href="<?php echo base_url('asset/asset_default/js/bootstrap.min.js')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/asset_default/default.css')?>">
