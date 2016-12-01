@@ -12,6 +12,11 @@ public function __construct(){
 		$data['path_content']='admin/module/add_user';
         $this->load->view('admin/pages/dashboard', $data);
 	}
+	public function manage_user(){
+		$data['title_web']= 'Manage User';
+		$data['path_content']='admin/module/manage_user';
+        $this->load->view('admin/pages/dashboard', $data);
+	}
 
 }
 ?>

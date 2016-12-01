@@ -240,8 +240,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-plus-circle"></i> Add User</a></li>
-            <li><a href="index2.html"><i class="fa fa-list"></i> Manage User</a></li>
+            <li><a href="index.html"><i class="fa fa-plus-circle"></i> Add User</a></li>
+            <li class="active"><a href="index2.html"><i class="fa fa-list"></i> Manage User</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -282,69 +282,169 @@
       <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
         <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Dashboard
       </a>
-      <form class="fr">
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Username</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Password</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Confirm Password</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Email</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Permission</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <select class="form-control fr">
-              <option >1 - Admin</option>
-              <option >2 - User</option>
-            </select>
-                        <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
-              Save
+<table id="example1" class="table table-responsive table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Permission</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
             </a>
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      </form>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomo18</td>
+          <td>harutomo18@gmail.com</td>
+          <td>1 - Admin</td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+      <tfoot>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Permission</th>
+          <th>Action</th>
+        </tr>
+      </tfoot>  
+
+      </table>
       </div>
       </div>
     </section>
