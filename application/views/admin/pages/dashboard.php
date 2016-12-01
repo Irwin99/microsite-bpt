@@ -7,6 +7,8 @@
 
 
 <?php 
+    $this->load->view('admin/common/navbar');
+    $this->load->view('admin/common/sidebar');
 	$this->load->view($path_content);
 ?>
 

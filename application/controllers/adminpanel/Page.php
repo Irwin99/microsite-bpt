@@ -17,6 +17,16 @@ public function __construct(){
 		$data['path_content']='admin/module/manage_user';
         $this->load->view('admin/pages/dashboard', $data);
 	}
+	public function add_news(){
+		$data['title_web']= 'Add News';
+		$data['path_content']='admin/module/add_news';
+        $this->load->view('admin/pages/dashboard', $data);
+	}
+	public function manage_news(){
+		$data['title_web']= 'Manage News';
+		$data['path_content']='admin/module/manage_news';
+        $this->load->view('admin/pages/dashboard', $data);
+	}
 
 }
 ?>

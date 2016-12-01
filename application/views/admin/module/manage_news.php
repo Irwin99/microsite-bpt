@@ -22,17 +22,19 @@
 <table id="example1" class="table table-responsive table-bordered table-striped">
       <thead>
         <tr>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Permission</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Image</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
+          <td>Harutomo Mengikuti Demo 2 Desember</td>
+          <td>News</td>
+          <td>Lorem Ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet</td>
+          <td><img class="img-responsive" src="<?php echo base_url('asset/img/news.jpg')?>"></td>
           <td>
             <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
@@ -43,9 +45,10 @@
           </td>
         </tr>
         <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
+          <td>Harutomo Mengikuti Demo 2 Desember</td>
+          <td>News</td>
+          <td>Lorem Ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet</td>
+          <td><img class="img-responsive" src="<?php echo base_url('asset/img/news.jpg')?>"></td>
           <td>
             <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
@@ -56,9 +59,10 @@
           </td>
         </tr>
         <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
+          <td>Harutomo Mengikuti Demo 2 Desember</td>
+          <td>News</td>
+          <td>Lorem Ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet</td>
+          <td><img class="img-responsive" src="<?php echo base_url('asset/img/news.jpg')?>"></td>
           <td>
             <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
@@ -69,9 +73,10 @@
           </td>
         </tr>
         <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
+          <td>Harutomo Mengikuti Demo 2 Desember</td>
+          <td>News</td>
+          <td>Lorem Ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet</td>
+          <td><img class="img-responsive" src="<?php echo base_url('asset/img/news.jpg')?>"></td>
           <td>
             <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
@@ -82,9 +87,10 @@
           </td>
         </tr>
         <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
+          <td>Harutomo Mengikuti Demo 2 Desember</td>
+          <td>News</td>
+          <td>Lorem Ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet</td>
+          <td><img class="img-responsive" src="<?php echo base_url('asset/img/news.jpg')?>"></td>
           <td>
             <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
@@ -95,74 +101,10 @@
           </td>
         </tr>
         <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>Tomo18</td>
-          <td>harutomo18@gmail.com</td>
-          <td>1 - Admin</td>
+          <td>Harutomo Mengikuti Demo 2 Desember</td>
+          <td>News</td>
+          <td>Lorem Ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet lorem ipsum dolor sil amet</td>
+          <td><img class="img-responsive" src="<?php echo base_url('asset/img/news.jpg')?>"></td>
           <td>
             <a class="btn btn-sm bpt-btn-primary btn-rd" href="#" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
@@ -174,9 +116,10 @@
         </tr>
       <tfoot>
         <tr>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Permission</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Image</th>
           <th>Action</th>
         </tr>
       </tfoot>  

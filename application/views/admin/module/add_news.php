@@ -4,11 +4,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add User
+        Add News
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Add User</li>
+        <li class="active">Add News</li>
       </ol>
     </section>
 
@@ -23,7 +23,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Username</label>
+            <label class="control-label">Title</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
             <input type="text" class="form-control col-md-7 col-xs-12">
@@ -34,47 +34,36 @@
       <div class="form-group">
         <div class="row">
           <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Password</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Confirm Password</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Email</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Permission</label>
+            <label class="control-label">Category</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
             <select class="form-control fr">
-              <option >1 - Admin</option>
-              <option >2 - User</option>
+              <option >Events</option>
+              <option >Activities</option>
             </select>
-                        <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label">Content</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content"></textarea>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label"> Image</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <input type="file" class="form-control col-md-7 col-xs-12">
+            <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
               Save
             </a>
           </div>
