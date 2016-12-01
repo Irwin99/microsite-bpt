@@ -32,7 +32,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="#">
+          <a href="<?php echo base_url('adminpanel/dashboard/')?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
@@ -44,10 +44,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-plus-circle"></i> Add News</a></li>
-            <li><a href="index2.html"><i class="fa fa-list"></i> Manage News</a></li>
-            <li><a href="index2.html"><i class="fa fa-plus-circle"></i> Add Category</a></li>
-            <li><a href="index2.html"><i class="fa fa-list"></i> Manage Category</a></li>
+            <li><a href="<?php echo base_url('adminpanel/news/add_news')?>"><i class="fa fa-plus-circle"></i> Add News</a></li>
+            <li><a href="<?php echo base_url('adminpanel/news/manage_news')?>"><i class="fa fa-list"></i> Manage News</a></li>
+            <li><a href="<?php echo base_url('adminpanel/news/add_category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
+            <li><a href="<?php echo base_url('adminpanel/news/manage_category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -70,8 +70,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-plus-circle"></i> Add User</a></li>
-            <li><a href="index2.html"><i class="fa fa-list"></i> Manage User</a></li>
+            <li><a href="<?php echo base_url('adminpanel/users/add_user')?>"><i class="fa fa-plus-circle"></i> Add User</a></li>
+            <li><a href="<?php echo base_url('adminpanel/users/manage_user')?>"><i class="fa fa-list"></i> Manage User</a></li>
           </ul>
         </li>
         <li class="treeview">
