@@ -8,7 +8,6 @@
 
 <?php 
 	$this->load->view($path_content);
-	$this->load->view('default/common/footer');
 ?>
 
 <!-- jQuery 2.2.3 -->
