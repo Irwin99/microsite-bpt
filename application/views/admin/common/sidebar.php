@@ -70,8 +70,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('adminpanel/users/add_user')?>"><i class="fa fa-plus-circle"></i> Add User</a></li>
-            <li><a href="<?php echo base_url('adminpanel/users/manage_user')?>"><i class="fa fa-list"></i> Manage User</a></li>
+            <li><a href="<?php echo base_url('adminpanel/user/add_user')?>"><i class="fa fa-plus-circle"></i> Add User</a></li>
+            <li><a href="<?php echo base_url('adminpanel/user/manage-user')?>"><i class="fa fa-list"></i> Manage User</a></li>
           </ul>
         </li>
         <li class="treeview">

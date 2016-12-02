@@ -4,11 +4,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add User
+        Edit User
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Add User</li>
+        <li class="active">Edit User</li>
       </ol>
     </section>
 
@@ -16,17 +16,29 @@
     <section class="content">
     <div class="box body">
     <div class="container">
-      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
+      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/user/manage-user')?>" role="button">
         <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Dashboard
       </a>
-      <form class="fr">
+      <form class="" method="post">
+        <?php echo validation_errors()?>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+              <label class="control-label">Fullname</label>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-9">
+              <input type="text" class="form-control col-md-7 col-xs-12" name="fullname" value="<?php echo $result['fullname']?>">
+            </div>
+            <div class="col-md-3 col-sm-3 hidden-xs"></div>
+          </div>
+        </div>
       <div class="form-group">
         <div class="row">
           <div class="col-md-3 col-sm-3 col-xs-3 text-right">
             <label class="control-label">Username</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
+            <input type="text" class="form-control col-md-7 col-xs-12" name="username" value="<?php echo $result['username']?>">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -37,7 +49,7 @@
             <label class="control-label">Password</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
+            <input type="password" class="form-control col-md-7 col-xs-12"name="password">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -48,7 +60,7 @@
             <label class="control-label">Confirm Password</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
+            <input type="password" class="form-control col-md-7 col-xs-12" name="confirm_pass">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -59,7 +71,7 @@
             <label class="control-label">Email</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
+            <input type="text" class="form-control col-md-7 col-xs-12"name="email" value="<?php echo $result['email']?>">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -70,13 +82,17 @@
             <label class="control-label">Permission</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <select class="form-control fr">
-              <option >1 - Admin</option>
-              <option >2 - User</option>
-            </select>
-                        <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
+
+            <?php
+            $options = array(
+                '1' => '1-Admin',
+                '2' => '2.-User'
+            );
+            echo form_dropdown('permission',$options,$result['permission'],'class="form-control"');
+            ?>
+            <button class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" >
               Save
-            </a>
+            </button>
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -176,4 +192,3 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-
