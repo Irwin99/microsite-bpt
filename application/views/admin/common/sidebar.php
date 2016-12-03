@@ -46,11 +46,11 @@
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url('adminpanel/news/add_news')?>"><i class="fa fa-plus-circle"></i> Add News</a></li>
             <li><a href="<?php echo base_url('adminpanel/news/manage_news')?>"><i class="fa fa-list"></i> Manage News</a></li>
-            <li><a href="<?php echo base_url('adminpanel/news/add_category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
-            <li><a href="<?php echo base_url('adminpanel/news/manage_category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
+            <li><a href="<?php echo base_url($this->uri->segment(1).'/category/add_category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
+            <li><a href="<?php echo base_url('adminpanel/category/manage_category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-file"></i> <span>Page</span>
             <span class="pull-right-container">
@@ -61,7 +61,7 @@
             <li class="active"><a href="index.html"><i class="fa fa-plus-circle"></i> Add Page</a></li>
             <li><a href="index2.html"><i class="fa fa-list"></i> Manage Page</a></li>
           </ul>
-        </li>
+        </li> -->
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i> <span>User</span>
@@ -74,7 +74,7 @@
             <li><a href="<?php echo base_url('adminpanel/user/manage-user')?>"><i class="fa fa-list"></i> Manage User</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-cogs"></i> <span>Setting</span>
             <span class="pull-right-container">
@@ -85,7 +85,7 @@
             <li class="active"><a href="index.html"><i class="fa fa-cog"></i> Configuration</a></li>
             <li><a href="index2.html"><i class="fa fa-bars"></i> Menu Management</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
       <!-- /.sidebar-menu -->
     </section>

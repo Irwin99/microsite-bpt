@@ -4,59 +4,72 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Category
+        Manage Category
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Add Category</li>
+        <li class="active">Add User</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
     <div class="box body">
-    <div class="container">
-      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
-        <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Dashboard
-      </a>
-      <form class="fr">
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Category Title</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label"> Image</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="file" class="form-control col-md-7 col-xs-12">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Description</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content"></textarea>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
-              Save
+      <div class="container">
+        <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/category/add-category/')?>" role="button">
+          <i class="fa fa-plus fa-fw" aria-hidden="true"></i>Add Category
+        </a>
+<table id="example1" class="table table-responsive table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Category Title</th>
+          <th>Image</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+      		if($results!=FALSE){
+      			foreach ($results as $rows) {
+      				?>
+      				<tr>
+                <td><?php echo $rows->nama_category ?></td>
+                <td><?php if($rows->image_category!= "") {
+                  ?>
+                  <img src="<?php echo base_url($rows->image_category)?>" height="150px">
+                  <?php
+                } ?></td>
+                <td><?php echo $rows->description_category ?></td>
+
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/category/edit_category/'.$rows->id_category)?>" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
             </a>
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      </form>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/category/delete_category/'.$rows->id_category)?>" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <?php
+      }
+    }
+         ?>
+         <?php
+         echo $links;
+          ?>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+
+          <th>Image</th>
+          <th>Action</th>
+        </tr>
+      </tfoot>
+
+      </table>
       </div>
       </div>
     </section>
@@ -151,4 +164,3 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-

@@ -6,7 +6,7 @@ class Page extends CI_Controller {
 public function __construct(){
 		parent::__construct();
 	}
-	
+
 	public function news(){
 		$data['title_web']= 'News';
 		$data['path_content']='default/module/news';
