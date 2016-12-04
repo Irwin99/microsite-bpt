@@ -38,14 +38,14 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-newspaper-o"></i> <span>News</span>
+            <i class="fa fa-newspaper-o"></i> <span>Article</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('adminpanel/news/add_news')?>"><i class="fa fa-plus-circle"></i> Add News</a></li>
-            <li><a href="<?php echo base_url('adminpanel/news/manage_news')?>"><i class="fa fa-list"></i> Manage News</a></li>
+            <li><a href="<?php echo base_url('adminpanel/article/add_article')?>"><i class="fa fa-plus-circle"></i> Add article</a></li>
+            <li><a href="<?php echo base_url('adminpanel/article/manage_article')?>"><i class="fa fa-list"></i> Manage article</a></li>
             <li><a href="<?php echo base_url($this->uri->segment(1).'/category/add_category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
             <li><a href="<?php echo base_url('adminpanel/category/manage_category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
           </ul>

@@ -4,11 +4,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Manage News
+        Add article
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Manage News</li>
+        <li class="active">Add article</li>
       </ol>
     </section>
 
@@ -16,64 +16,74 @@
     <section class="content">
     <div class="box body">
     <div class="container">
-      <button class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/news/add-news/')?>" role="button">
-        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>Add news
-      </button>
-<table id="example1" class="table table-responsive table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Content</th>
-          <th>Image</th>
-          <td>Input By</td>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-      		if($results!=FALSE){
-      			foreach ($results as $rows) {
-      				?>
-      				<tr>
-                <td><?php echo $rows->title_news ?></td>
-                <td><?php echo $rows->nama_category ?></td>
-                <td><?php echo $rows->content_news ?></td>
-                <td><?php if($rows->image_news!= "") {
-                  ?>
-                  <img src="<?php echo base_url($rows->image_news)?>" height="150px">
-                  <?php
-                } ?></td>
-                <td><?php echo $rows->fullname?></td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/news/edit_news/'.$rows->id_news)?>" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/news/delete_news/'.$rows->id_news)?>" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <?php
-        }
-      }
-         ?>
-         <?php
-         echo $links;
-          ?>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Content</th>
-          <th>Image</th>
-          <td>Input By</td>
-          <th>Action</th>
-        </tr>
-      </tfoot>
+      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
+        <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Dashboard
+      </a>
+      <?php echo validation_errors();
+        ?>
 
-      </table>
+      <?php
+      if(isset($error)){
+     echo $error;
+   }
+      ?>
+      <?php echo form_open_multipart('');?>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label">Title</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <input type="text" class="form-control col-md-7 col-xs-12" name='title_article'>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label">Category</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <?php
+        $options = array(''=>'choose category');
+          if($category != FALSE){
+            foreach ($category as $rows) {
+              $options[$rows->id_category] = $rows->nama_category;
+            }
+          }
+          echo form_dropdown('id_category',$options,set_value('id_category'),'class="form-control"');
+        ?>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label">Content</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content" name="content_article"></textarea>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label"> Image</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <input type="file" class="form-control col-md-7 col-xs-12" name="userfile">
+            <button class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
+              Save
+            </button>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+
       </div>
       </div>
     </section>

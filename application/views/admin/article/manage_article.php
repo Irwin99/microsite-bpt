@@ -4,11 +4,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      Edit News
+        Manage article
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Edit News</li>
+        <li class="active">Manage article</li>
       </ol>
     </section>
 
@@ -16,74 +16,64 @@
     <section class="content">
     <div class="box body">
     <div class="container">
-      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
-        <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Dashboard
-      </a>
-      <?php echo validation_errors();
-        ?>
+      <button class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/article/add-article/')?>" role="button">
+        <i class="fa fa-plus fa-fw" aria-hidden="true"></i>Add article
+      </button>
+<table id="example1" class="table table-responsive table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Image</th>
+          <td>Input By</td>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+      		if($results!=FALSE){
+      			foreach ($results as $rows) {
+      				?>
+      				<tr>
+                <td><?php echo $rows->title_article ?></td>
+                <td><?php echo $rows->nama_category ?></td>
+                <td><?php echo $rows->content_article ?></td>
+                <td><?php if($rows->image_article!= "") {
+                  ?>
+                  <img src="<?php echo base_url($rows->image_article)?>" height="150px">
+                  <?php
+                } ?></td>
+                <td><?php echo $rows->fullname?></td>
+          <td>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/edit_article/'.$rows->id_article)?>" role="button">
+              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/delete_article/'.$rows->id_article)?>" role="button">
+              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+        <?php
+        }
+      }
+         ?>
+         <?php
+         echo $links;
+          ?>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Image</th>
+          <td>Input By</td>
+          <th>Action</th>
+        </tr>
+      </tfoot>
 
-      <?php
-      if(isset($error)){
-     echo $error;
-   }
-      ?>
-      <?php echo form_open_multipart('');?>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Title</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12" name='title_news' value="<?php echo $result['title_news']?>">
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Category</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <?php
-        $options = array(''=>'choose category');
-          if($category != FALSE){
-            foreach ($category as $rows) {
-              $options[$rows->id_category] = $rows->nama_category;
-            }
-          }
-          echo form_dropdown('id_category',$options,$result['id_category'],'class="form-control"');
-        ?>
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label">Content</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content" name="content_news"><?php echo $result['content_news']?></textarea>
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
-            <label class="control-label"> Image</label>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="file" class="form-control col-md-7 col-xs-12" name="userfile">
-            <button class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
-              Save
-            </button>
-          </div>
-          <div class="col-md-3 col-sm-3 hidden-xs"></div>
-        </div>
-      </div>
-
+      </table>
       </div>
       </div>
     </section>
@@ -178,4 +168,3 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-_

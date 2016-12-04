@@ -4,11 +4,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add News
+      Edit article
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Add News</li>
+        <li class="active">Edit article</li>
       </ol>
     </section>
 
@@ -34,7 +34,7 @@
             <label class="control-label">Title</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12" name='title_news'>
+            <input type="text" class="form-control col-md-7 col-xs-12" name='title_article' value="<?php echo $result['title_article']?>">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -52,7 +52,7 @@
               $options[$rows->id_category] = $rows->nama_category;
             }
           }
-          echo form_dropdown('id_category',$options,set_value('id_category'),'class="form-control"');
+          echo form_dropdown('id_category',$options,$result['id_category'],'class="form-control"');
         ?>
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
@@ -64,7 +64,7 @@
             <label class="control-label">Content</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content" name="content_news"></textarea>
+            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content" name="content_article"><?php echo $result['content_article']?></textarea>
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
@@ -178,3 +178,4 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
+_
