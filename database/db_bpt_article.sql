@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 02 Des 2016 pada 17.09
--- Versi Server: 5.6.25
--- PHP Version: 5.6.11
+-- Generation Time: Dec 04, 2016 at 05:29 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,10 +23,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bp_bod`
+-- Table structure for table `bp_article`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_bod` (
+CREATE TABLE `bp_article` (
+  `id_article` int(11) NOT NULL,
+  `id_category` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `title_article` varchar(100) NOT NULL,
+  `date_article` datetime NOT NULL,
+  `content_article` varchar(100) NOT NULL,
+  `image_article` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bp_article`
+--
+
+INSERT INTO `bp_article` (`id_article`, `id_category`, `id_user`, `title_article`, `date_article`, `content_article`, `image_article`) VALUES
+(1, 2, 1, 'PILGUB', '2016-12-03 04:14:54', 'PLIGUB MAKIN SERU BANGET', 'asset/images/pligub.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bp_bod`
+--
+
+CREATE TABLE `bp_bod` (
   `id_bod` int(11) NOT NULL,
   `title_bod` varchar(100) NOT NULL,
   `name_bod` varchar(100) NOT NULL,
@@ -38,39 +61,31 @@ CREATE TABLE IF NOT EXISTS `bp_bod` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bp_category`
+-- Table structure for table `bp_category`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_category` (
+CREATE TABLE `bp_category` (
   `id_category` int(11) NOT NULL,
   `nama_category` varchar(100) NOT NULL,
   `description_category` longtext NOT NULL,
   `image_category` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Struktur dari tabel `bp_news`
+-- Dumping data for table `bp_category`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_news` (
-  `id_news` int(11) NOT NULL,
-  `id_category` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `title_news` varchar(100) NOT NULL,
-  `date_news` datetime NOT NULL,
-  `content_news` varchar(100) NOT NULL,
-  `image_news` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `bp_category` (`id_category`, `nama_category`, `description_category`, `image_category`) VALUES
+(1, 'event', 'motorola', 'asset/images/moto.jpg'),
+(2, 'News', 'PILGUB', 'asset/images/pligub.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bp_page`
+-- Table structure for table `bp_page`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_page` (
+CREATE TABLE `bp_page` (
   `id_page` int(11) NOT NULL,
   `title_page` varchar(200) NOT NULL,
   `content_page` longtext NOT NULL,
@@ -82,10 +97,10 @@ CREATE TABLE IF NOT EXISTS `bp_page` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bp_setting`
+-- Table structure for table `bp_setting`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_setting` (
+CREATE TABLE `bp_setting` (
   `id_setting` int(11) NOT NULL,
   `title_website` varchar(100) NOT NULL,
   `about` varchar(100) NOT NULL,
@@ -100,10 +115,10 @@ CREATE TABLE IF NOT EXISTS `bp_setting` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bp_testimonial`
+-- Table structure for table `bp_testimonial`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_testimonial` (
+CREATE TABLE `bp_testimonial` (
   `id_testimonial` int(11) NOT NULL,
   `testimonial` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -111,10 +126,10 @@ CREATE TABLE IF NOT EXISTS `bp_testimonial` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bp_user`
+-- Table structure for table `bp_user`
 --
 
-CREATE TABLE IF NOT EXISTS `bp_user` (
+CREATE TABLE `bp_user` (
   `id_user` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` char(32) NOT NULL,
@@ -122,10 +137,10 @@ CREATE TABLE IF NOT EXISTS `bp_user` (
   `email` varchar(100) NOT NULL,
   `permission` tinyint(2) NOT NULL COMMENT '1.admin , 2.user',
   `date_regis` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `bp_user`
+-- Dumping data for table `bp_user`
 --
 
 INSERT INTO `bp_user` (`id_user`, `username`, `password`, `fullname`, `email`, `permission`, `date_regis`) VALUES
@@ -135,6 +150,12 @@ INSERT INTO `bp_user` (`id_user`, `username`, `password`, `fullname`, `email`, `
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `bp_article`
+--
+ALTER TABLE `bp_article`
+  ADD PRIMARY KEY (`id_article`);
 
 --
 -- Indexes for table `bp_bod`
@@ -147,12 +168,6 @@ ALTER TABLE `bp_bod`
 --
 ALTER TABLE `bp_category`
   ADD PRIMARY KEY (`id_category`);
-
---
--- Indexes for table `bp_news`
---
-ALTER TABLE `bp_news`
-  ADD PRIMARY KEY (`id_news`);
 
 --
 -- Indexes for table `bp_page`
@@ -183,6 +198,11 @@ ALTER TABLE `bp_user`
 --
 
 --
+-- AUTO_INCREMENT for table `bp_article`
+--
+ALTER TABLE `bp_article`
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `bp_bod`
 --
 ALTER TABLE `bp_bod`
@@ -191,12 +211,7 @@ ALTER TABLE `bp_bod`
 -- AUTO_INCREMENT for table `bp_category`
 --
 ALTER TABLE `bp_category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `bp_news`
---
-ALTER TABLE `bp_news`
-  MODIFY `id_news` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `bp_page`
 --
@@ -216,7 +231,7 @@ ALTER TABLE `bp_testimonial`
 -- AUTO_INCREMENT for table `bp_user`
 --
 ALTER TABLE `bp_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
