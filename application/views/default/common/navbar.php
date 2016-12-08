@@ -49,7 +49,7 @@
   <div class="bpt-navbar" style="margin-left:50px">
         <div class="col-md-2 col-sm-3 hidden-xs" style="padding-left:70px">
 
-            <img src="<?php echo base_url('asset/asset_default/asset/images/logo_bpt.gif')?>" class="img-responsive" alt="Blue Power Technology">
+            <img src="<?php echo base_url('asset/asset_default/images/logo_bpt.gif')?>" class="img-responsive" alt="Blue Power Technology">
       
       <!--    <div class="col-md-4 col-sm-4 col-xs-6 visible-xs">
             <img src="asset/images/logo_bpt.gif" class="img-responsive" alt="Blue Power Technology" style="margin-top:10px">
