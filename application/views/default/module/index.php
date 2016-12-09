@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Don't let your business fail due power failure!</h2>
-                    <p class="lead">Let us help your business with <a target="_blank" href="http://join.deathtothestockphoto.com/">Riello UPS Smart Solutions </a>!</p>
+                    <p class="lead">Let us help your business with <a target="_blank" href="<?php echo base_url('page/article')?>">Riello UPS Smart Solutions </a>!</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -45,7 +45,7 @@
                                 <h4>
                                     <strong>Network</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Connect With It</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                 <h4>
                                     <strong>Security</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Safe your Company.</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                 <h4>
                                     <strong>Infrastructure</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Build your own IT Infrastructure</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                 <h4>
                                     <strong>Software</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Keep in touch with company</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -113,62 +113,28 @@
                     <h2>News & Events</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="news-item">
-                                <a href="#">
-                                    <div class="bpt-box">
-                                        <div class="news-title">
-                                            Lorem Ipsum
-                                        </div>
-                                        <div class="news-preview">
-                                            Lorem ipsum dolor sil amet Lorem ipsum dolor sil amet
-                                        </div>
+                        <?php
+                            if($results!= FALSE){
+                                foreach ($results as $rows) {
+                                ?>
+                                <div class="col-md-6">
+                                    <div class="news-item" style="background-image:url('<?php echo base_url($rows->image_article)?>');">
+                                        <a href="#">
+                                            <div class="bpt-box">
+                                                <div class="news-title">
+                                                    <?php echo $rows->title_article?>
+                                                </div>
+                                                <div class="news-preview">
+                                                    Lorem ipsum dolor sil amet Lorem ipsum dolor sil amet
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="news-item2">
-                                <a href="#">
-                                    <div class="bpt-box">
-                                        <div class="news-title">
-                                            Lorem Ipsum
-                                        </div>
-                                        <div class="news-preview">
-                                            Lorem ipsum dolor sil amet Lorem ipsum dolor sil amet
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="news-item3">
-                                <a href="#">
-                                    <div class="bpt-box">
-                                        <div class="news-title">
-                                            Lorem Ipsum
-                                        </div>
-                                        <div class="news-preview">
-                                            Lorem ipsum dolor sil amet Lorem ipsum dolor sil amet
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="news-item4">
-                                <a href="#">
-                                    <div class="bpt-box">
-                                        <div class="news-title">
-                                            Lorem Ipsum
-                                        </div>
-                                        <div class="news-preview">
-                                            Lorem ipsum dolor sil amet Lorem ipsum dolor sil amet
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                                </div>
+                                <?php          
+                                }
+                            }
+                        ?>
                     </div>
                     <!-- /.row (nested) -->
                     <a href="#" class="btn btn-dark">View More News</a>

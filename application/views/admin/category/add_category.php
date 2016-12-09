@@ -34,7 +34,7 @@
             <label class="control-label">Category Title</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <input type="text" class="form-control col-md-7 col-xs-12"name="nama_category">
+            <input type="text" class="form-control col-md-7 col-xs-12" name="name_category">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>

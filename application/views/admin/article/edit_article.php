@@ -16,8 +16,8 @@
     <section class="content">
     <div class="box body">
     <div class="container">
-      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="#" role="button">
-        <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Dashboard
+      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/article/manage-article')?>" role="button">
+        <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>Back to Article
       </a>
       <?php echo validation_errors();
         ?>
@@ -49,7 +49,7 @@
         $options = array(''=>'choose category');
           if($category != FALSE){
             foreach ($category as $rows) {
-              $options[$rows->id_category] = $rows->nama_category;
+              $options[$rows->id_category] = $rows->name_category;
             }
           }
           echo form_dropdown('id_category',$options,$result['id_category'],'class="form-control"');

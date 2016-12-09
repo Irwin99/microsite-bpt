@@ -36,10 +36,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('adminpanel/article/add_article')?>"><i class="fa fa-plus-circle"></i> Add article</a></li>
-            <li><a href="<?php echo base_url('adminpanel/article/manage_article')?>"><i class="fa fa-list"></i> Manage article</a></li>
-            <li><a href="<?php echo base_url($this->uri->segment(1).'/category/add_category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
-            <li><a href="<?php echo base_url('adminpanel/category/manage_category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
+            <li><a href="<?php echo base_url('adminpanel/article/add-article')?>"><i class="fa fa-plus-circle"></i> Add article</a></li>
+            <li><a href="<?php echo base_url('adminpanel/article/manage-article')?>"><i class="fa fa-list"></i> Manage article</a></li>
+            <li><a href="<?php echo base_url($this->uri->segment(1).'/category/add-category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
+            <li><a href="<?php echo base_url('adminpanel/category/manage-category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
           </ul>
         </li>
         <!-- <li class="treeview">
@@ -62,7 +62,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('adminpanel/user/add_user')?>"><i class="fa fa-plus-circle"></i> Add User</a></li>
+            <li><a href="<?php echo base_url('adminpanel/user/add-user')?>"><i class="fa fa-plus-circle"></i> Add User</a></li>
             <li><a href="<?php echo base_url('adminpanel/user/manage-user')?>"><i class="fa fa-list"></i> Manage User</a></li>
           </ul>
         </li>

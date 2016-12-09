@@ -15,11 +15,11 @@
     <!-- Main content -->
     <section class="content">
     <div class="box body">
-    <div class="container">
+    <div class="table-responsive">
       <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/user/add-user/')?>" role="button">
         <i class="fa fa-add fa-fw" aria-hidden="true"></i>Add User
       </a>
-<table id="example1" class="table table-responsive table-bordered table-striped">
+<table id="example1" class="table  table-bordered table-striped">
       <thead>
         <tr>
           <th>Username</th>

@@ -19,7 +19,7 @@ class Category extends CI_Controller {
     // Ngeload data
     $perpage = 10;
     $this->load->library('pagination'); // load libraray pagination
-    $config['base_url'] = base_url($this->uri->segment(1).'/category/manage_category/'); // configurate link pagination
+    $config['base_url'] = base_url($this->uri->segment(1).'/category/manage-category/'); // configurate link pagination
     $config['total_rows'] = $this->mod->countData('category');// fetch total record in databae using load
     $config['per_page'] = $perpage; // Total data in one page
     $config['uri_segment'] = 4; // catch uri segment where locate in 4th posisition
@@ -77,7 +77,7 @@ class Category extends CI_Controller {
 
 			else{
 				$save = $this->mct->savecategory($_POST,$this->upload->data());
-				redirect(base_url($this->uri->segment(1).'/category/manage_category'));
+				redirect(base_url($this->uri->segment(1).'/category/manage-category'));
 			}
 		}
 	}
@@ -89,7 +89,7 @@ class Category extends CI_Controller {
 			$id=$this->uri->segment(4);
 			$data['result']=$this->mod->getDataWhere('category','id_category',$id);
 			if($data['result']==FALSE)
-				redirect(base_url('adminpanel/category/manage_category'));
+				redirect(base_url('adminpanel/category/manage-category'));
 
 				$this->form_validation->set_rules('nama_category','category Name','required');
 				$this->form_validation->set_rules('description_category','Description','required');
@@ -110,12 +110,12 @@ class Category extends CI_Controller {
 				$this->load->library('upload', $config);
 				if ( ! $this->upload->do_upload()){
 					$save = $this->mct->editcategory($_POST,FALSE,$id);
-					redirect(base_url($this->uri->segment(1).'/category/manage_category'));
+					redirect(base_url($this->uri->segment(1).'/category/manage-category'));
 				}
 
 			else{
 				$save = $this->mct->editcategory($_POST,$this->upload->data(),$id);
-				redirect(base_url($this->uri->segment(1).'/category/manage_category'));
+				redirect(base_url($this->uri->segment(1).'/category/manage-category'));
 			}
 		}
 	}
@@ -124,7 +124,7 @@ class Category extends CI_Controller {
 			$id = $this->uri->segment(4);
 			$this->db->where('id_category',$id);
 			$this->db->delete('category');
-			redirect(base_url($this->uri->segment(1).'/category/manage_category'));
+			redirect(base_url($this->uri->segment(1).'/category/manage-category'));
 	}
 }
 

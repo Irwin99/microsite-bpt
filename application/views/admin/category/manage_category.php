@@ -15,11 +15,11 @@
     <!-- Main content -->
     <section class="content">
     <div class="box body">
-      <div class="container">
+      <div class="table-responsive">
         <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/category/add-category/')?>" role="button">
           <i class="fa fa-plus fa-fw" aria-hidden="true"></i>Add Category
         </a>
-<table id="example1" class="table table-responsive table-bordered table-striped">
+<table id="example1" class="table  table-bordered table-striped">
       <thead>
         <tr>
           <th>Category Title</th>
@@ -34,7 +34,7 @@
       			foreach ($results as $rows) {
       				?>
       				<tr>
-                <td><?php echo $rows->nama_category ?></td>
+                <td><?php echo $rows->name_category ?></td>
                 <td><?php if($rows->image_category!= "") {
                   ?>
                   <img src="<?php echo base_url($rows->image_category)?>" height="150px">
@@ -43,10 +43,10 @@
                 <td><?php echo $rows->description_category ?></td>
 
           <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/category/edit_category/'.$rows->id_category)?>" role="button">
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/category/edit-category/'.$rows->id_category)?>" role="button">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
             </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/category/delete_category/'.$rows->id_category)?>" role="button">
+            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/category/delete-category/'.$rows->id_category)?>" role="button">
               <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
             </a>
           </td>

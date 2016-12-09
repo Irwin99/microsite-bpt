@@ -13,10 +13,10 @@ class Dashboard extends CI_Controller {
     $this->load->view('admin/pages/index', $data);
 	}
 	function login(){
+		$data['title_web']= 'Adminpanel Login | BPT';
 			$this->form_validation->set_rules('username','Username','required');
 			$this->form_validation->set_rules('password','Password','required|callback_validLogin');
 			if(!$this->form_validation->run()){
-				$data['title_web']= 'Adminpanel Login | BPT';
 				$this->load->view('admin/login',$data);
 			}
 			else{

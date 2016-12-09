@@ -21,7 +21,7 @@ class Article extends CI_Controller {
     // Ngeload data
     $perpage = 10;
     $this->load->library('pagination'); // load libraray pagination
-    $config['base_url'] = base_url($this->uri->segment(1).'/article/manage_article/'); // configurate link pagination
+    $config['base_url'] = base_url($this->uri->segment(1).'/article/manage-article/'); // configurate link pagination
     $config['total_rows'] = $this->mod->countData('article');// fetch total record in databae using load
     $config['per_page'] = $perpage; // Total data in one page
     $config['uri_segment'] = 4; // catch uri segment where locate in 4th posisition
@@ -40,13 +40,13 @@ class Article extends CI_Controller {
     $config['next_tag_close'] = '</li>';
     $this->pagination->initialize($config); // intialize var config
     $page = ($this->uri->segment(4))? $this->uri->segment(4) : 0; // If uri segment in 4th = 0 so this program not catch the uri segment
-    $data['results'] = $this->mat->fetcharticle($config['per_page'],$page,$this->uri->segment(4)); // fetch data using limit and pagination
+    $data['results'] = $this->mat->fetchArticle($config['per_page'],$page,$this->uri->segment(4)); // fetch data using limit and pagination
     $data['links'] = $this->pagination->create_links(); // Make a variable (array) link so the view can call the variable
     $data['total_rows'] = $this->mod->countData('article'); // Make a variable (array) link so the view can call the variable
     $this->load->view('admin/pages/index',$data);
 		}
 		else{
-			$data['results'] = $this->mat->fetcharticleSearch($_POST); // fetch data using limit and pagination
+			$data['results'] = $this->mat->fetchArticleSearch($_POST); // fetch data using limit and pagination
 			$data['links'] = false;
 			$this->load->view('admin/pages/index',$data);
 		}
@@ -55,7 +55,7 @@ class Article extends CI_Controller {
 		function add_article(){
 			$data['title_web'] = 'Add article | Adminpanel BPT';
 			$data['path_content'] = 'admin/article/add_article';
-      $data['category'] = $this->mat->fetchallcategory();
+      $data['category'] = $this->mat->fetchAllCategory();
 
       $this->form_validation->set_rules('id_category','category name','required');
 			$this->form_validation->set_rules('title_article','article title','required');
@@ -80,8 +80,8 @@ class Article extends CI_Controller {
 				}
 
 			else{
-				$save = $this->mat->savearticle($_POST,$this->upload->data());
-				redirect(base_url($this->uri->segment(1).'/article/manage_article'));
+				$save = $this->mat->saveArticle($_POST,$this->upload->data());
+				redirect(base_url($this->uri->segment(1).'/article/manage-article'));
 			}
 		}
 	}
@@ -89,7 +89,7 @@ class Article extends CI_Controller {
 	function edit_article(){
 			$data['title_web'] = 'Edit article | Adminpanel BPT';
 			$data['path_content'] = 'admin/article/edit_article';
-      $data['category'] = $this->mat->fetchallcategory();
+      $data['category'] = $this->mat->fetchAllCategory();
 
 			$id=$this->uri->segment(4);
 			$data['result']=$this->mod->getDataWhere('article','id_article',$id);
@@ -115,12 +115,12 @@ class Article extends CI_Controller {
 				$this->load->library('upload', $config);
 				if ( ! $this->upload->do_upload()){
 					$save = $this->mat->editarticle($_POST,FALSE,$id);
-					redirect(base_url($this->uri->segment(1).'/article/manage_article'));
+					redirect(base_url($this->uri->segment(1).'/article/manage-article'));
 				}
 
 			else{
-				$save = $this->mat->editarticle($_POST,$this->upload->data(),$id);
-				redirect(base_url($this->uri->segment(1).'/article/manage_article'));
+				$save = $this->mat->editArticle($_POST,$this->upload->data(),$id);
+				redirect(base_url($this->uri->segment(1).'/article/manage-article'));
 			}
 		}
 	}
@@ -129,7 +129,7 @@ class Article extends CI_Controller {
 			$id = $this->uri->segment(4);
 			$this->db->where('id_article',$id);
 			$this->db->delete('article');
-			redirect(base_url($this->uri->segment(1).'/article/manage_article'));
+			redirect(base_url($this->uri->segment(1).'/article/manage-article'));
 	}
 }
 

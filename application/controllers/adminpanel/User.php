@@ -19,7 +19,7 @@ class User extends CI_Controller {
     // Ngeload data
     $perpage = 10;
     $this->load->library('pagination'); // load libraray pagination
-    $config['base_url'] = base_url($this->uri->segment(1).'/user/manage_user/'); // configurate link pagination
+    $config['base_url'] = base_url($this->uri->segment(1).'/user/manage-user/'); // configurate link pagination
     $config['total_rows'] = $this->mod->countData('user');// fetch total record in databae using load
     $config['per_page'] = $perpage; // Total data in one page
     $config['uri_segment'] = 4; // catch uri segment where locate in 4th posisition
@@ -55,7 +55,7 @@ class User extends CI_Controller {
 			}
 			else{
 				$save = $this->mus->saveUser($_POST);
-				redirect(base_url($this->uri->segment(1).'/user/manage_user'));
+				redirect(base_url($this->uri->segment(1).'/user/manage-user'));
 			}
 		}
 
@@ -79,7 +79,7 @@ class User extends CI_Controller {
         }
         else{
           $save = $this->mus->editUser($_POST,$id);
-          redirect(base_url($this->uri->segment(1).'/user/manage_user'));
+          redirect(base_url($this->uri->segment(1).'/user/manage-user'));
         }
 		}
 
@@ -87,7 +87,7 @@ class User extends CI_Controller {
 			$id = $this->uri->segment(4);
 			$this->db->where('id_user',$id);
 			$this->db->delete('user');
-			redirect(base_url($this->uri->segment(1).'/user/manage_user'));
+			redirect(base_url($this->uri->segment(1).'/user/manage-user'));
 		}
 
 }

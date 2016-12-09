@@ -253,11 +253,11 @@ footer {
 }
 
 .news-item{
-    background-image:url('../../img/portfolio-1.jpg');
     background-repeat: no-repeat;
     margin-bottom: 30px;
     height:303px;
     width:455px;
+
 }
 .news-item2{
     background-image:url('../../img/portfolio-2.jpg');
@@ -314,9 +314,11 @@ footer {
                -webkit-transition: opacity .25s ease;
                height:100%;
                width:100%;
+    color: #fff;
 }
 .bpt-box:hover{
     opacity:1;
+    color: #fff;
 }
 .news-item a{
     color:#333;

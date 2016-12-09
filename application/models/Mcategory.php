@@ -13,7 +13,7 @@ class Mcategory extends CI_Model {
       $this->db->limit($limit,($pagenumber*$limit)-$limit);
     else
       $this->db->limit($limit,$start);
-	  $this->db->order_by('nama_category','DESC');
+	  $this->db->order_by('name_category','DESC');
     $query = $this->db->get('category');
     if($query->num_rows()>0){
       return $query->result();
@@ -26,7 +26,7 @@ class Mcategory extends CI_Model {
 
   function saveCategory($data,$upload_data){
     $array = array(
-        'nama_category' => $data['nama_category'],
+        'name_category' => $data['name_category'],
         'description_category' => $data['description_category'],
 			  'image_category' => 'asset/images/'.$upload_data['orig_name']
 
@@ -37,7 +37,7 @@ class Mcategory extends CI_Model {
   }
     function editCategory($data,$upload_data,$id){
       $array = array(
-				'nama_category' => $data['nama_category'],
+				'name_category' => $data['name_category'],
         'description_category' => $data['description_category'],
 			);
 			if($upload_data!=false){
@@ -51,14 +51,21 @@ class Mcategory extends CI_Model {
 
 		function fetchCategorySearch($data) {
 			$this->db->like($data['by'],$data['search']);
-			$this->db->order_by('nama_category','DESC');
+			$this->db->order_by('name_category','ASC');
 	    $query = $this->db->get('category');
 	    if($query->num_rows()>0){
 	      return $query->result();
 	    }
 	    else return FALSE;
 		}
-
+    function getCategory($id){
+      $this->db->where('id_category',$id);
+      $query = $this->db->get('category');
+    if($query->num_rows()>0){
+      return $query->row_array();
+    }
+    else return FALSE;
+    }
 
 
 

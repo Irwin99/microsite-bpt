@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://medskin.id/beta/microsite-bpt/';
 
 /*
 |--------------------------------------------------------------------------
@@ -314,7 +314,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'FXGDSGSGFsfdadfsdf31343525FEFDfgsrg';
+$config['encryption_key'] = 'FXGDSGSGFsfdadfsdf31343525FEFDfgsrBPT123g';
 
 /*
 |--------------------------------------------------------------------------
@@ -368,7 +368,7 @@ $config['encryption_key'] = 'FXGDSGSGFsfdadfsdf31343525FEFDfgsrg';
 |
 */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'BPBP';
+$config['sess_cookie_name'] = 'BPBTPTBPT';
 $config['sess_expiration'] = 7200;
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;

@@ -17,7 +17,7 @@
                 <a href="#services" onclick=$("#menu-close").click();>Services</a>
             </li>
             <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+                <a href="#news" onclick=$("#menu-close").click();>News</a>
             </li>
             <li>
                 <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
@@ -72,7 +72,7 @@
             <div class="collapse navbar-collapse" id="bpt-collapse-nav">
               <ul class="nav navbar-nav">
                     <li class="dropdown">
-                      <a href="#">Home</a>
+                      <a href="<?php echo base_url('')?>">Home</a>
                       <!--<ul class="dropdown-menu bpt-submenu">
                         <li><a href="#">Grow with BPT</a></li>
                         <li><a href="#">Our Values</a></li>
@@ -102,10 +102,19 @@
                       </ul>
                     </li>-->
                     <li class="dropdown">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">News & Events<span class="caret"></span></a>
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Article<span class="caret"></span></a>
                       <ul class="dropdown-menu bpt-submenu">
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Events</a></li>
+                      <?php
+                        $category = $this->mod->fetchAllData('category');
+                        if($category != FALSE){
+                          foreach ($category as $rows) {
+                            ?>
+                            <li><a href="<?php echo base_url('page/category/'.$rows->id_category.'/'.$this->mod->urlFriendly($rows->name_category)) ?>"><?php echo $rows->name_category ?></a></li>
+                            <?php    
+                          }
+                        }
+                      ?>
+                      <li><a href="<?php echo base_url('page/article')?>">All Article</a></li>
                       </ul>
                     </li>
                     <!--<li class="dropdown">
@@ -124,8 +133,8 @@
                         <li><a href="#">Search jobs</a></li>
                         <li><a href="#">Graduate Trainee Program</a></li>
                       </ul>
-                    </li>-->
-                    <li><a href="#">Contact</a></li>
+                    </li>
+                    <li><a href="#">Contact</a></li>-->
                   </ul>
             </div>
           </nav>

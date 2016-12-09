@@ -15,66 +15,66 @@
     <!-- Main content -->
     <section class="content">
     <div class="box body">
-    <div class="container">
-      <button class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/article/add-article/')?>" role="button">
+      <a class="btn btn-sm bpt-btn-primary btn-rd" style="margin-top:10px" href="<?php echo base_url($this->uri->segment(1).'/article/add-article/')?>" role="button">
         <i class="fa fa-plus fa-fw" aria-hidden="true"></i>Add article
-      </button>
-<table id="example1" class="table table-responsive table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Content</th>
-          <th>Image</th>
-          <td>Input By</td>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-      		if($results!=FALSE){
-      			foreach ($results as $rows) {
-      				?>
-      				<tr>
-                <td><?php echo $rows->title_article ?></td>
-                <td><?php echo $rows->nama_category ?></td>
-                <td><?php echo $rows->content_article ?></td>
-                <td><?php if($rows->image_article!= "") {
+      </a>
+      <div class="table-responsive">
+        <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th width="10%">Title</th>
+                  <th>Category</th>
+                  <th width="20%">Content</th>
+                  <th>Image</th>
+                  <td>Input By</td>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+              		if($results!=FALSE){
+              			foreach ($results as $rows) {
+              				?>
+              				<tr>
+                        <td><?php echo $rows->title_article ?></td>
+                        <td><?php echo $rows->name_category ?></td>
+                        <td><?php echo $rows->content_article ?></td>
+                        <td><?php if($rows->image_article!= "") {
+                          ?>
+                          <img src="<?php echo base_url($rows->image_article)?>" height="150px">
+                          <?php
+                        } ?></td>
+                        <td><?php echo $rows->fullname?></td>
+                  <td>
+                    <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/edit-article/'.$rows->id_article)?>" role="button">
+                      <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/delete-article/'.$rows->id_article)?>" role="button">
+                      <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
+                    </a>
+                  </td>
+                </tr>
+                <?php
+                }
+              }
+                 ?>
+                 <?php
+                 echo $links;
                   ?>
-                  <img src="<?php echo base_url($rows->image_article)?>" height="150px">
-                  <?php
-                } ?></td>
-                <td><?php echo $rows->fullname?></td>
-          <td>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/edit_article/'.$rows->id_article)?>" role="button">
-              <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/delete_article/'.$rows->id_article)?>" role="button">
-              <i class="fa fa-trash fa-fw" aria-hidden="true"></i>
-            </a>
-          </td>
-        </tr>
-        <?php
-        }
-      }
-         ?>
-         <?php
-         echo $links;
-          ?>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Content</th>
-          <th>Image</th>
-          <td>Input By</td>
-          <th>Action</th>
-        </tr>
-      </tfoot>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Content</th>
+                  <th>Image</th>
+                  <td>Input By</td>
+                  <th>Action</th>
+                </tr>
+              </tfoot>
 
-      </table>
-      </div>
+              </table>
+        </div>
       </div>
     </section>
     <!-- /.content -->
