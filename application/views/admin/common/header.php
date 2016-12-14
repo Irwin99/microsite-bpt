@@ -25,12 +25,22 @@
   <!-- Daterange picker -->
   <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/plugins/daterangepicker/daterangepicker.css')?>">
   <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/admin_default.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')?>">
-  <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/admin_default.css')?>">  
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+
+
+
+<!-- jQuery 2.2.0 -->
+
+<script>
+           $('.textarea').wysihtml5({
+             "font-styles": false, //Font styling, e.g. h1, h2, etc.
+        "emphasis": true, //Italics, bold, etc.
+        "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers.
+        "html": true, //Button which allows you to edit the generated HTML.
+        "link": true, //Button to insert a link.
+        "image": false, //Button to insert an image.
+        "color": true //Button to change color of font
+           });
+</script>
