@@ -73,6 +73,7 @@
               <ul class="nav navbar-nav">
                     <li class="dropdown">
                       <a href="<?php echo base_url('')?>">Home</a>
+                       <a href="<?php echo base_url('page/article')?>">Article</a>
                       <!--<ul class="dropdown-menu bpt-submenu">
                         <li><a href="#">Grow with BPT</a></li>
                         <li><a href="#">Our Values</a></li>
@@ -100,7 +101,7 @@
                         <li><a href="#">Infrastructure</a></li>
                         <li><a href="#">Lenovo support</a></li>
                       </ul>
-                    </li>-->
+                    </li>
                     <li class="dropdown">
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Article<span class="caret"></span></a>
                       <ul class="dropdown-menu bpt-submenu">
@@ -116,7 +117,7 @@
                       ?>
                       <li><a href="<?php echo base_url('page/article')?>">All Article</a></li>
                       </ul>
-                    </li>
+                    </li>-->
                     <!--<li class="dropdown">
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media<span class="caret"></span></a>
                       <ul class="dropdown-menu bpt-submenu">
