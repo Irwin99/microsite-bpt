@@ -26,6 +26,7 @@
                   <th>Category</th>
                   <th width="20%">Content</th>
                   <th>Image</th>
+                  <th>Caption</th>
                   <td>Input By</td>
                   <th>Action</th>
                 </tr>
@@ -37,13 +38,14 @@
               				?>
               				<tr>
                         <td><?php echo $rows->title_article ?></td>
-                        <td><?php echo $rows->name_category ?></td>
+                        <td><?php echo $rows->nama_category ?></td>
                         <td><?php echo $rows->content_article ?></td>
                         <td><?php if($rows->image_article!= "") {
                           ?>
                           <img src="<?php echo base_url($rows->image_article)?>" height="150px">
                           <?php
                         } ?></td>
+                        <td><?php echo $rows->caption ?></td>
                         <td><?php echo $rows->fullname?></td>
                   <td>
                     <a class="btn btn-sm bpt-btn-primary btn-rd" href="<?php echo base_url($this->uri->segment(1).'/article/edit-article/'.$rows->id_article)?>" role="button">
@@ -68,6 +70,7 @@
                   <th>Category</th>
                   <th>Content</th>
                   <th>Image</th>
+                  <th>Caption</th>
                   <td>Input By</td>
                   <th>Action</th>
                 </tr>

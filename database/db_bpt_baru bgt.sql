@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2016 at 05:29 AM
+-- Generation Time: Dec 17, 2016 at 07:16 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -33,15 +33,17 @@ CREATE TABLE `bp_article` (
   `title_article` varchar(100) NOT NULL,
   `date_article` datetime NOT NULL,
   `content_article` varchar(100) NOT NULL,
-  `image_article` varchar(100) NOT NULL
+  `image_article` varchar(100) NOT NULL,
+  `caption` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `bp_article`
 --
 
-INSERT INTO `bp_article` (`id_article`, `id_category`, `id_user`, `title_article`, `date_article`, `content_article`, `image_article`) VALUES
-(1, 2, 1, 'PILGUB', '2016-12-03 04:14:54', 'PLIGUB MAKIN SERU BANGET', 'asset/images/pligub.jpg');
+INSERT INTO `bp_article` (`id_article`, `id_category`, `id_user`, `title_article`, `date_article`, `content_article`, `image_article`, `caption`) VALUES
+(1, 2, 1, 'PILGUB', '2016-12-03 04:14:54', 'PLIGUB MAKIN SERU BANGET', 'asset/images/pligub.jpg', ''),
+(2, 1, 1, 'test', '2016-12-07 05:46:30', 'asd', 'asset/images/cherry-jpg-inspirations-website.jpg', 'event ');
 
 -- --------------------------------------------------------
 
@@ -201,7 +203,7 @@ ALTER TABLE `bp_user`
 -- AUTO_INCREMENT for table `bp_article`
 --
 ALTER TABLE `bp_article`
-  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `bp_bod`
 --

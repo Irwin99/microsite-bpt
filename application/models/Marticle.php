@@ -32,6 +32,7 @@ class Marticle extends CI_Model {
 				'id_category' => $data['id_category'],
         'title_article' => $data['title_article'],
         'content_article' => $data['content_article'],
+				'caption' => $data['caption'],
 				'date_article' => date('Y-m-d H:i:s'),
 			  'image_article' => 'asset/images/'.$upload_data['orig_name']
 
@@ -44,6 +45,7 @@ class Marticle extends CI_Model {
       $array = array(
 				'id_category' => $data['id_category'],
         'title_article' => $data['title_article'],
+				'caption' => $data['caption'],
         'content_article' => $data['content_article'],
 			);
 			if($upload_data!=false){
@@ -74,7 +76,7 @@ class Marticle extends CI_Model {
 	    if($query->num_rows()>0){
 	      return $query->row_array();
 	    }
-	    else return FALSE;	
+	    else return FALSE;
 		}
 		function fetchAllCategory(){
 			$query = $this->db->get('category');

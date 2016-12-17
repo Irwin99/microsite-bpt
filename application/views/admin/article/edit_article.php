@@ -49,7 +49,7 @@
         $options = array(''=>'choose category');
           if($category != FALSE){
             foreach ($category as $rows) {
-              $options[$rows->id_category] = $rows->name_category;
+              $options[$rows->id_category] = $rows->nama_category;
             }
           }
           echo form_dropdown('id_category',$options,$result['id_category'],'class="form-control"');
@@ -64,7 +64,18 @@
             <label class="control-label">Content</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <textarea class="form-control col-md-7 col-xs-12" rows="5" id="content" name="content_article"><?php echo $result['content_article']?></textarea>
+            <textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px;"name="content_article"><?php echo $result['content_article']?></textarea>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label">Caption</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <input type="text" class="form-control col-md-7 col-xs-12" name='caption' value="<?php echo $result['caption']?>">
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>

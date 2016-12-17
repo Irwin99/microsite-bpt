@@ -63,9 +63,20 @@
           <div class="col-md-3 col-sm-3 col-xs-3 text-right">
             <label class="control-label">Content</label>
           </div>
-          <div class="col-md-6 col-sm-6 col-xs-9" style="margin-top:40px">
-                <textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px;"name="content_article"></textarea>
-            </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px;"name="content_article"><?php echo $result['content_article']?></textarea>
+          </div>
+          <div class="col-md-3 col-sm-3 hidden-xs"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+            <label class="control-label">Caption</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-9">
+            <input type="text" class="form-control col-md-7 col-xs-12" name='caption'>
+          </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>
       </div>

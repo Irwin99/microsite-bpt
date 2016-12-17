@@ -60,6 +60,7 @@ class Article extends CI_Controller {
       $this->form_validation->set_rules('id_category','category name','required');
 			$this->form_validation->set_rules('title_article','article title','required');
 			$this->form_validation->set_rules('content_article','content','required');
+			$this->form_validation->set_rules('caption','caption','required');
 
 
 				if(!$this->form_validation->run()){
@@ -97,7 +98,8 @@ class Article extends CI_Controller {
 				redirect(base_url('adminpanel/article/manage_article'));
         $this->form_validation->set_rules('id_category','category name','required');
 				$this->form_validation->set_rules('title_article','article Name','required');
-				$this->form_validation->set_rules('content_article','Description','required');
+				$this->form_validation->set_rules('content_article','Content','required');
+					$this->form_validation->set_rules('caption','caption','required');
 
 
 
