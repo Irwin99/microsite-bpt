@@ -27,20 +27,27 @@
               </div>
               <div class="row">
                 <div class="col-md-3">
-                  <img class="img-responsive" src="<?php echo base_url($rows->image_article)?>">
+                  <!--<img class="img-responsive" src="<?php echo base_url($rows->image_article)?>">-->
+                  <div style="background-image:url(<?php echo base_url($rows->image_article)?>);background-size: cover; background-position: center; height:200px"></div>
+                  <small><em><?php echo $rows->caption; ?></em></small>
                 </div>
                 <div class="col-md-9 text-left">
-                  <?php
-                    echo substr($rows->content_article, 0, 300)
-                  ?>
+                  <div style="height:120px;margin-bottom:45px;">
+                    <?php
+                      echo substr($rows->content_article, 0, 800)."...";
+                    ?>
+                  </div>
+                  <div>
+                    <a href="<?php echo base_url('page/read-article/'.$rows->id_article.'/'.$this->mod->urlFriendly($rows->title_article))?>">
+                      <button class="btn btn-md bpt-btn-primary" style="border-radius:0px">Read More <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-9 text-left">
-                  <a href="<?php echo base_url('page/read-article/'.$rows->id_article.'/'.$this->mod->urlFriendly($rows->title_article))?>">
-                    <button class="btn btn-md bpt-btn-primary" style="border-radius:0px">Read More <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
-                  </a>
+
                 </div>
               </div>
           </div><!-- /.blog-preview-->

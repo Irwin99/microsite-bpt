@@ -13,6 +13,8 @@ class Marticle extends CI_Model {
       $this->db->limit($limit,($pagenumber*$limit)-$limit);
     else
       $this->db->limit($limit,$start);
+		if($this->session->userdata('permission')!= 1)
+			$this->db->where('article.id_user',$this->session->userdata('idAdmin'));
 		$this->db->join('category','article.id_category = category.id_category');
 		$this->db->join('user','article.id_user = user.id_user');
 	  $this->db->order_by('date_article','DESC');

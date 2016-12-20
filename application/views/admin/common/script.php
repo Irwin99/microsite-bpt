@@ -1,6 +1,6 @@
 <script src="<?php echo base_url('asset/asset_lte/plugins/jQuery/jquery-2.2.3.min.js')?>"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!--<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
@@ -31,6 +31,18 @@
 <!-- AdminLTE App -->
 <script src="<?php echo base_url('asset/asset_lte/dist/js/app.min.js')?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url('asset/asset_lte/dist/js/pages/dashboard.js')?>"></script>
+<!--<script src="<?php echo base_url('asset/asset_lte/dist/js/pages/dashboard.js')?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('asset/asset_lte/dist/js/demo.js')?>"></script>
+
+<script>
+           $('.textarea').wysihtml5({
+             "font-styles": false, //Font styling, e.g. h1, h2, etc.
+        "emphasis": true, //Italics, bold, etc.
+        "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers.
+        "html": true, //Button which allows you to edit the generated HTML.
+        "link": true, //Button to insert a link.
+        "image": false, //Button to insert an image.
+        "color": true //Button to change color of font
+           });
+</script>

@@ -9,7 +9,7 @@ class Madmin extends CI_Model {
 	function validLogin($username,$password){
 		$this->db->where('username',$username);
 		$this->db->where('password',md5($password));
-		$this->db->where('permission',1);
+		
 	  	$query = $this->db->get('user');
 		if($query->num_rows()>0){
 			return $query->row_array();

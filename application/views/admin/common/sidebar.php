@@ -15,12 +15,6 @@
 
         </div>
       </div>
-
-      <!-- search form (Optional) -->
-      
-      <!-- /.search form -->
-
-      <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
@@ -28,6 +22,9 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
+        <?php
+        if($this->session->userdata('permission')== 2){
+        ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-newspaper-o"></i> <span>Article</span>
@@ -42,18 +39,24 @@
             <li><a href="<?php echo base_url('adminpanel/category/manage-category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
           </ul>
         </li>
-        <!-- <li class="treeview">
-          <a href="#">
-            <i class="fa fa-file"></i> <span>Page</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-plus-circle"></i> Add Page</a></li>
-            <li><a href="index2.html"><i class="fa fa-list"></i> Manage Page</a></li>
-          </ul>
-        </li> -->
+        <?php
+      }
+      else if($this->session->userdata('permission')==1){
+         ?>
+         <li class="treeview">
+           <a href="#">
+             <i class="fa fa-newspaper-o"></i> <span>Article</span>
+             <span class="pull-right-container">
+               <i class="fa fa-angle-left pull-right"></i>
+             </span>
+           </a>
+           <ul class="treeview-menu">
+             <li><a href="<?php echo base_url('adminpanel/article/add-article')?>"><i class="fa fa-plus-circle"></i> Add article</a></li>
+             <li><a href="<?php echo base_url('adminpanel/article/manage-article')?>"><i class="fa fa-list"></i> Manage article</a></li>
+             <li><a href="<?php echo base_url($this->uri->segment(1).'/category/add-category')?>"><i class="fa fa-plus-circle"></i> Add Category</a></li>
+             <li><a href="<?php echo base_url('adminpanel/category/manage-category')?>"><i class="fa fa-list"></i> Manage Category</a></li>
+           </ul>
+         </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i> <span>User</span>
@@ -66,18 +69,10 @@
             <li><a href="<?php echo base_url('adminpanel/user/manage-user')?>"><i class="fa fa-list"></i> Manage User</a></li>
           </ul>
         </li>
-        <!-- <li class="treeview">
-          <a href="#">
-            <i class="fa fa-cogs"></i> <span>Setting</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-cog"></i> Configuration</a></li>
-            <li><a href="index2.html"><i class="fa fa-bars"></i> Menu Management</a></li>
-          </ul>
-        </li> -->
+        <?php
+      }
+         ?>
+
       </ul>
       <!-- /.sidebar-menu -->
     </section>

@@ -64,7 +64,7 @@
             <label class="control-label">Content</label>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-9">
-            <textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px;"name="content_article"><?php echo $result['content_article']?></textarea>
+            <textarea class="textarea" placeholder="Enter text ..." style="width: 700px; height: 200px;"name="content_article"><?php echo $result['content_article']?></textarea>
           </div>
           <div class="col-md-3 col-sm-3 hidden-xs"></div>
         </div>

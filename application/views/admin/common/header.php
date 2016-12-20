@@ -6,9 +6,6 @@
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/bootstrap/css/bootstrap.min.css')?>">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/dist/css/AdminLTE.min.css')?>">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -32,15 +29,3 @@
 
 
 <!-- jQuery 2.2.0 -->
-
-<script>
-           $('.textarea').wysihtml5({
-             "font-styles": false, //Font styling, e.g. h1, h2, etc.
-        "emphasis": true, //Italics, bold, etc.
-        "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers.
-        "html": true, //Button which allows you to edit the generated HTML.
-        "link": true, //Button to insert a link.
-        "image": false, //Button to insert an image.
-        "color": true //Button to change color of font
-           });
-</script>
