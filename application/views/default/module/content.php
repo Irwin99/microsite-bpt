@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Don't let your business fail due power failure!</h2>
-                    <p class="lead">Let us help your business with <a target="_blank" href="<?php echo base_url('page/article')?>">Riello UPS Smart Solutions </a>!</p>
+                    <p class="lead">Let us help your business with <a target="_blank" href="<?php echo base_url('p/article')?>">Riello UPS Smart Solutions </a>!</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -114,7 +114,7 @@
                                 ?>
                                 <div class="col-md-6">
                                     <div class="news-item" style="background-image:url('<?php echo base_url($rows->image_article)?>');">
-                                        <a href="<?php echo base_url('page/read-article/'.$rows->id_article.'/'.$this->mod->urlFriendly($rows->title_article))?>">
+                                        <a href="<?php echo base_url('p/read-article/'.$rows->id_article.'/'.$this->mod->urlFriendly($rows->title_article))?>">
                                             <div class="bpt-box">
                                                 <div class="news-title">
                                                     <?php echo $rows->title_article?>
@@ -132,7 +132,7 @@
                         ?>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="<?php echo base_url('page/article')?>" class="btn btn-dark">View More News</a>
+                    <a href="<?php echo base_url('p/article')?>" class="btn btn-dark">View More News</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>

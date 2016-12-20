@@ -49,7 +49,7 @@
         $options = array(''=>'choose category');
           if($category != FALSE){
             foreach ($category as $rows) {
-              $options[$rows->id_category] = $rows->nama_category;
+              $options[$rows->id_category] = $rows->name_category;
             }
           }
           echo form_dropdown('id_category',$options,set_value('id_category'),'class="form-control"');

@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Don't let your business fail due power failure!</h2>
-                    <p class="lead">Let us help your business with <a target="_blank" href="<?php echo base_url('page/article')?>">Riello UPS Smart Solutions </a>!</p>
+                    <p class="lead">Let us help your business with <a target="_blank" href="<?php echo base_url('p/article')?>">Riello UPS Smart Solutions </a>!</p>
                 </div>
             </div>
             <!-- /.row -->

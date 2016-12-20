@@ -1,7 +1,7 @@
 <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>PT. Blue Power Technology</strong>
+                    <!-- <h4><strong>PT. Blue Power Technology</strong>
                     </h4>
                     <p>Graha BIP, Graha BIP Lantai 6, Jalan Jend Gatot Subroto Kav. 23
                         <br>Jakarta, 12930</p>
@@ -22,8 +22,8 @@
                             <a href="#"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Blue Power Technology</p>
+                    <hr class="small"> -->
+                    <p class="text-muted" style="margin-top:10px;margin-bottom: -50px;">Copyright &copy; Blue Power Technology</p>
                 </div>
             </div>
         </div>

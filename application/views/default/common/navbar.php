@@ -28,14 +28,17 @@
                         }
                         else {
                         ?>
-                        <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="bpt-topbar">
     <div class="container">
-      <div class="col-md-3 col-xs-6">
-        <i class="fa fa-map-marker fa-fw"></i> DKI Jakarta
+      <div class="col-md-4 col-xs-6">
+        <a href=""><i class="fa fa-facebook" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
+        <i class="fa fa-twitter" aria-hidden="true" style="margin: 15px 5px 0 0;"></i>
+        <i class="fa fa-instagram" aria-hidden="true" style="margin: 15px 5px 0 0;"></i>
+        <i class="fa fa-linkedin" aria-hidden="true" style="margin: 15px 5px 0 0;"></i>
       </div>
-      <div class="col-md-7 hidden-xs"></div>
-      <div class="col-md-2 col-xs-6 bpt-topbar-flag text-right">
+      <div class="col-md-6 hidden-xs"></div>
+      <div class="col-md-2 col-xs-6 bpt-topbar-flag text-left">
         <!--<a href="#">
           <img src="asset/images/indonesia.jpg" style="height:20px">
         </a>
@@ -43,22 +46,13 @@
           <img src="asset/images/uk.jpg" style="height:20px">
         </a>
         -->
+        <img src="<?php echo base_url('asset/images/member_cti.png')?>" height="25px">
       </div>
     </div>
   </div>
-  <div class="bpt-navbar" style="margin-left:50px">
-        <div class="col-md-2 col-sm-3 hidden-xs" style="padding-left:70px">
-
-            <img src="<?php echo base_url('asset/asset_default/images/logo_bpt.gif')?>" class="img-responsive" alt="Blue Power Technology">
-      
-      <!--    <div class="col-md-4 col-sm-4 col-xs-6 visible-xs">
-            <img src="asset/images/logo_bpt.gif" class="img-responsive" alt="Blue Power Technology" style="margin-top:10px">
-          </div>
-         <div class="col-md-8 col-sm-4 col-xs-6">
-            <h1><b>Blue Power</b> Technology</h1>
-          </div>-->
-        </div>
-        <div class="col-md-10 col-xs-10 col-sm-9">
+  <div class="bpt-navbar">
+      <div class="container">
+        <div class="col-md-12 col-sm-12 col-xs-12 ">
           <nav class="navbar navbar-default">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bpt-collapse-nav" aria-expanded="false" aria-control="navbar">
@@ -67,13 +61,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand visible-xs" href="#">BPT</a>
+              <a class="visible-xs clearfix" href="#">
+                <img src="<?php echo base_url('asset/asset_default/images/logo_bpt.gif')?>" width="80px" alt="Blue Power Technology">
+              </a>
+              <img src="<?php echo base_url('asset/asset_default/images/logo_bpt.gif')?>" width="100px" alt="Blue Power Technology" class="hidden-xs">
             </div>
             <div class="collapse navbar-collapse" id="bpt-collapse-nav">
               <ul class="nav navbar-nav">
-                    <li class="dropdown">
+                    <li>
                       <a href="<?php echo base_url('')?>">Home</a>
-                       <a href="<?php echo base_url('page/article')?>">Article</a>
+                    </li>
+                    <li>
+                      <a href="<?php echo base_url('p/article')?>">Article</a>
+                    </li>
                       <!--<ul class="dropdown-menu bpt-submenu">
                         <li><a href="#">Grow with BPT</a></li>
                         <li><a href="#">Our Values</a></li>
@@ -137,10 +137,17 @@
                     </li>
                     <li><a href="#">Contact</a></li>-->
                   </ul>
+                  <form class="navbar-form navbar-right" style="margin-top: 40px;">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </form>
             </div>
           </nav>
         </div>
-
+        <div class="clearfix"></div>
+        </div>
   </div>
 </nav>
                         <?php

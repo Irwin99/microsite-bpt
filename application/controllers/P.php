@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Page extends CI_Controller {
+class P extends CI_Controller {
 
 public function __construct(){
 		parent::__construct();
@@ -15,7 +15,7 @@ public function __construct(){
 
 		$perpage = 10;
 	    $this->load->library('pagination'); // load libraray pagination
-	    $config['base_url'] = base_url('page/article/'); // configurate link pagination
+	    $config['base_url'] = base_url('p/article/'); // configurate link pagination
 	    $config['total_rows'] = $this->mod->countData('article');// fetch total record in databae using load
 	    $config['per_page'] = $perpage; // Total data in one page
 	    $config['uri_segment'] = 3; // catch uri segment where locate in 4th posisition
@@ -36,7 +36,7 @@ public function __construct(){
 		$id = $this->uri->segment(3);
 		$data['result'] = $this->marticle->getArticle($id);
 		if($data['result'] == FALSE)
-			redirect(base_url('page/article'));
+			redirect(base_url('p/article'));
 
 		// update view
 		$array = array(
@@ -54,11 +54,11 @@ public function __construct(){
 		$id = $this->uri->segment(3);
 		$data['result'] = $this->mcategory->getCategory($id);
 		if($data['result'] == FALSE)
-			redirect(base_url('page/article'));
+			redirect(base_url('p/article'));
 
 		$perpage = 10;
 	    $this->load->library('pagination'); // load libraray pagination
-	    $config['base_url'] = base_url('page/category/'.$id.'/'.$this->mod->urlFriendly($data['result']['name_category']).'/'); // configurate link pagination
+	    $config['base_url'] = base_url('p/category/'.$id.'/'.$this->mod->urlFriendly($data['result']['name_category']).'/'); // configurate link pagination
 	    $config['total_rows'] = $this->mod->countData('article');// fetch total record in databae using load
 	    $config['per_page'] = $perpage; // Total data in one page
 	    $config['uri_segment'] = 5; // catch uri segment where locate in 4th posisition

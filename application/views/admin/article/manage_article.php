@@ -38,7 +38,7 @@
               				?>
               				<tr>
                         <td><?php echo $rows->title_article ?></td>
-                        <td><?php echo $rows->nama_category ?></td>
+                        <td><?php echo $rows->name_category ?></td>
                         <td><?php echo substr($rows->content_article,0,300) ?>...</td>
                         <td><?php if($rows->image_article!= "") {
                           ?>
