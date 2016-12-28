@@ -153,13 +153,12 @@
             </div>
         </div>
     </aside>
-
     <!-- Map -->
     <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2593613840804!2d106.81804791418791!3d-6.229497995490628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e2e4d89afd%3A0xaa439c728b697fa8!2sPT.+Blue+Power+Technology!5e0!3m2!1sen!2sid!4v1480063446914"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.262100914306!2d106.81870219363692!3d-6.22913543225655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e25353c7bb%3A0x6b9e37a743c4f59f!2sCentennial+Tower!5e0!3m2!1sen!2sid!4v1482313197227"></iframe>
         <br />
         <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.262100914306!2d106.81870219363692!3d-6.22913543225655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e25353c7bb%3A0x6b9e37a743c4f59f!2sCentennial+Tower!5e0!3m2!1sen!2sid!4v1482313197227"></a>
         </small>
         </iframe>
     </section>

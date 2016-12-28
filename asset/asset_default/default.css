@@ -6,7 +6,7 @@ body, html{
 }
 .bpt-topbar{
 	background-color: #0F75BD;
-	padding: 0 5px 0 5px;
+	padding: 0px 5px 0px 5px;
 	color:#fff;
 }
 .bpt-topbar a{
@@ -16,10 +16,10 @@ body, html{
 	padding-left:5px;
 	background-color: #fff;
 }
-.bpt-topbar-flag img{
+.bpt-topbar-flag{
 	background-color: #fff;
-	padding: 0 15px 0 15px;
-	height: 40px;
+	padding: 5px 15px 0 15px;
+	height: 55px;
 }
 .bpt-navbar{
 	border-bottom: 1px solid #e0e0e0;

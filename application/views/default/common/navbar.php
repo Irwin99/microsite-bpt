@@ -31,14 +31,14 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="bpt-topbar">
     <div class="container">
-      <div class="col-md-4 col-xs-6">
-        <a href=""><i class="fa fa-facebook" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
-        <i class="fa fa-twitter" aria-hidden="true" style="margin: 15px 5px 0 0;"></i>
-        <i class="fa fa-instagram" aria-hidden="true" style="margin: 15px 5px 0 0;"></i>
-        <i class="fa fa-linkedin" aria-hidden="true" style="margin: 15px 5px 0 0;"></i>
+      <div class="col-md-4 col-xs-6" style="padding: 5px 0;">
+        <a href="https://www.facebook.com/bluepowerid"><i class="fa fa-facebook fa-2x" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
+        <a href="https://twitter.com/bluepowerid"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
+        <a href="https://www.instagram.com/bluepowerid/"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
+        <a href="https://www.linkedin.com/company/blue-power-technology"><i class="fa fa-linkedin fa-2x" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
       </div>
       <div class="col-md-6 hidden-xs"></div>
-      <div class="col-md-2 col-xs-6 bpt-topbar-flag text-left">
+      <div class="col-md-2 col-xs-6 bpt-topbar-flag text-center">
         <!--<a href="#">
           <img src="asset/images/indonesia.jpg" style="height:20px">
         </a>
@@ -46,7 +46,7 @@
           <img src="asset/images/uk.jpg" style="height:20px">
         </a>
         -->
-        <img src="<?php echo base_url('asset/images/member_cti.png')?>" height="25px">
+        <img src="<?php echo base_url('asset/images/member_cti.png')?>" style="height:40px;">
       </div>
     </div>
   </div>

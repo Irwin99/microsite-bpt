@@ -32,7 +32,7 @@
         <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4><strong>PT. Blue Power Technology</strong>
                     </h4>
-                    <p>Graha BIP, Graha BIP Lantai 6, Jalan Jend Gatot Subroto Kav. 23
+                    <p>Centenial Tower Lt.12 Jl. Jend. Gatot Subroto Kav. 24 - 25
                         <br>Jakarta, 12930
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> +6221 806 22278 <i class="fa fa-fax fa-fw"></i> +6221 806 22279</li>

@@ -2,7 +2,7 @@
   <div class="bpt-about text-center" style="margin-bottom:20px;margin-top:175px">
     <div class="container">
       <div class="row bpt-title text-left">
-        <h2>Article / <?php echo $result['name_category']?></h2>
+        <h2>Article <!-- / <?php echo $result['name_category']?> --></h2>
       </div>
     </div>
             <div class="blog-preview">

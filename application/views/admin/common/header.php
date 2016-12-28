@@ -6,6 +6,7 @@
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/bootstrap/css/bootstrap.min.css')?>">
   <!-- Font Awesome -->
+  <link href="<?php echo base_url('asset/asset_default/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet" type="text/css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url('asset/asset_lte/dist/css/AdminLTE.min.css')?>">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
