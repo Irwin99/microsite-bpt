@@ -23,3 +23,6 @@
     <link rel="stylesheet" href="<?php echo base_url('asset/asset_default/js/bootstrap.min.js')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/asset_default/default.css')?>">
     <link rel="icon" href="<?php echo base_url('asset/images/favicon.jpg')?>" type="image/jpg">
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=53037072-b1e0-4a9c-ba59-c6c7fd25a7be"></script>
+    <script type="text/javascript">stLight.options({publisher: "53037072-b1e0-4a9c-ba59-c6c7fd25a7be", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>

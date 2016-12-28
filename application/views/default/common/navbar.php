@@ -30,7 +30,7 @@
                         ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="bpt-topbar">
-    <div class="container">
+    <div class="container text-center">
       <div class="col-md-4 col-xs-6" style="padding: 5px 0;">
         <a href="https://www.facebook.com/bluepowerid"><i class="fa fa-facebook fa-2x" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>
         <a href="https://twitter.com/bluepowerid"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="margin: 15px 5px 0 0;"></i></a>

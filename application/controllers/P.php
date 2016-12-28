@@ -72,5 +72,27 @@ public function __construct(){
 	    $data['total_rows'] = $this->mod->countData('article'); // Make a variable (array) link so the view can call the variable
         $this->load->view('default/pages/home', $data);
 	}
+	public function search_result(){
+		$data['path_content'] = 'default/module/search_result';
+		$id = $this->uri->segment(3);
+		$data['result'] = $this->mcategory->getCategory($id);
+
+
+		$perpage = 10;
+	    $this->load->library('pagination'); // load libraray pagination
+	    $config['base_url'] = base_url('p/category/'.$id.'/'.$this->mod->urlFriendly($data['result']['name_category']).'/'); // configurate link pagination
+	    $config['total_rows'] = $this->mod->countData('article');// fetch total record in databae using load
+	    $config['per_page'] = $perpage; // Total data in one page
+	    $config['uri_segment'] = 5; // catch uri segment where locate in 4th posisition
+	    $choice = $config['total_rows']/$config['per_page'] = $perpage; // Total record divided by total data in one page
+	    $config['num_links'] = round($choice); // Rounding Choice Variable
+	    $config['use_page_numbers'] = TRUE;
+	    $this->pagination->initialize($config); // intialize var config
+	    $page = ($this->uri->segment(5))? $this->uri->segment(5) : 0; // If uri segment in 4th = 0 so this program not catch the uri segment
+	    $data['results'] = $this->marticle->fetchArticleCategory($config['per_page'],$page,$this->uri->segment(5),$id); // fetch data using limit and pagination
+	    $data['links'] = $this->pagination->create_links(); // Make a variable (array) link so the view can call the variable
+	    $data['total_rows'] = $this->mod->countData('article'); // Make a variable (array) link so the view can call the variable
+		$this->load->view('default/pages/home',$data);
+	}
 }
 ?>
